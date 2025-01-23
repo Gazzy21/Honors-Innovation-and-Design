@@ -1,0 +1,78 @@
+/* General body and layout adjustments */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #EC7A1C; /* Set the background color */
+}
+
+/* Navbar adjustments */
+.navbar {
+  padding: 10px 20px;
+  background-color: #EC7A1C; /* Set navbar background color */
+}
+
+.navbar-nav {
+  font-size: 16px;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  color: white; /* Change text color in navbar to white for contrast */
+}
+
+/* Carousel image styling */
+.carousel-item img {
+  object-fit: cover;
+  height: 70vh; /* Ensure the image occupies the full height of the viewport */
+}
+
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.5); /* Slight background for caption */
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1); /* White color for carousel controls */
+}
+
+/* Responsive tweaks */
+@media (max-width: 767px) {
+  .navbar-nav {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .navbar-toggler {
+    border: none;
+  }
+
+  .carousel-item img {
+    height: 50vh; /* Make carousel images shorter on mobile */
+  }
+
+  .carousel-caption {
+    font-size: 0.8rem; /* Smaller text for captions on smaller screens */
+  }
+}
+
+@media (max-width: 992px) {
+  .carousel-item img {
+    height: 60vh; /* Adjust the carousel height for tablets */
+  }
+
+  .navbar-brand {
+    font-size: 1.3rem;
+  }
+}
+
+/* Footer styling (basic example) */
+footer {
+  background-color: #EC7A1C; /* Match the footer background color */
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+  color: white; /* White text for contrast */
+}
