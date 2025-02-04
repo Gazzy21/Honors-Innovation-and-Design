@@ -1,11 +1,11 @@
 const galleryData = {
     tsa: [
-      { img: "imgs/placeholdersmall.svg", title: "TSA Image 1", description: "TSA event highlights." },
-      { img: "imgs/placeholdersmall.svg", title: "TSA Image 2", description: "Students working on TSA projects." },
-      { img: "imgs/placeholdersmall.svg", title: "TSA Image 3", description: "More TSA activities." },
-      { img: "imgs/placeholdersmall.svg", title: "TSA Image 4", description: "TSA competition moments." },
-      { img: "imgs/placeholdersmall.svg", title: "TSA Image 5", description: "Collaboration at TSA." },
-      { img: "imgs/placeholdersmall.svg", title: "TSA Image 6", description: "Innovative TSA projects." }
+      { img: "imgs/tsa1.png", title: "TSA Image 1", description: "TSA event highlights." },
+      { img: "imgs/tsa2.png", title: "TSA Image 2", description: "Students working on TSA projects." },
+      { img: "imgs/tsa3.png", title: "TSA Image 3", description: "More TSA activities." },
+      { img: "imgs/tsa4.png", title: "TSA Image 4", description: "TSA competition moments." },
+      { img: "imgs/tsa5.png", title: "TSA Image 5", description: "Collaboration at TSA." },
+      { img: "imgs/tsa6.png", title: "TSA Image 6", description: "Innovative TSA projects." }
     ],
     mustang: [
       { img: "imgs/placeholdersmall.svg", title: "Morning Show 1", description: "Behind the scenes of Mustang Morning Show." },
@@ -63,17 +63,22 @@ const galleryData = {
   });
 
   const words = [
-    { text: "JavaScript", frequency: 50 },
-    { text: "HTML", frequency: 30 },
-    { text: "CSS", frequency: 40 },
-    { text: "React", frequency: 20 },
-    { text: "Node.js", frequency: 25 },
-    { text: "Python", frequency: 10 },
-    { text: "Git", frequency: 35 },
-    { text: "TypeScript", frequency: 45 },
-    { text: "Vue.js", frequency: 15 },
-    { text: "PHP", frequency: 5 },
+    { text: "Woodworking", frequency: 50 },
+    { text: "Graphics", frequency: 30 },
+    { text: "Video Productions", frequency: 40 },
+    { text: "Architecture", frequency: 20 },
+    { text: "Digital Media", frequency: 25 },
+    { text: "Video Game Design", frequency: 10 },
+    { text: "Programming", frequency: 35 },
+    { text: "Photography", frequency: 45 },
+    { text: "Engineering", frequency: 15 },
+    { text: "3D Printing", frequency: 5 },
 ];
+
+// Randomize frequency between 20 and 40 for each word
+words.forEach(word => {
+    word.frequency = Math.floor(Math.random() * (40 - 20 + 1)) + 20;
+});
 
 function createWordCloud() {
     const wordCloudContainer = document.getElementById('word-cloud');
@@ -82,7 +87,7 @@ function createWordCloud() {
         const span = document.createElement('span');
         span.textContent = word.text;
 
-        // Set font size based on frequency
+        // Set font size based on the randomized frequency
         const fontSize = 10 + word.frequency; // Adjust scale here
         span.style.fontSize = `${fontSize}px`;
 

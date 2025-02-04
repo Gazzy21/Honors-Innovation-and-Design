@@ -30,6 +30,9 @@
             <li class="nav-item">
               <a class="nav-link" href="#Gallery">Gallery</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Contact">Contact</a>
+            </li>
           </ul>
           <form class="d-flex" role="search">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -85,38 +88,41 @@
       </button>
     </div>
 
-    <hr>
+    <hr id="About">
     <div class="container">
-      <h1 class="text-center" id="About">Honors Innovation and Design</h1>
+      <h1 class="text-center">Honors Innovation and Design</h1>
       <hr>
       <h3 class="text-center">Do you like Technology Classes in the B-Wing? Do you want to continue taking these
         classes?</h3>
-      <h3 class="text-center"><b>In Honors Innovation and Design you get to focus on whatever you're interested in!</b>
+      <h3 class="text-center mb-3"><b>In Honors Innovation and Design you get to focus on whatever you're interested
+          in!</b>
       </h3>
       <div class="row">
         <div class="col-3"></div>
-        <div class="col-6 text-center">
+        <div class="col-6 d-flex justify-content-center">
           <div id="word-cloud"></div>
         </div>
         <div class="col-3"></div>
       </div>
+      <h1 class="text-center m-3 nameit">You name it!</h1>
+      <div class="row">
+        <div class="col-6">
+          <img src="imgs/placeholdersmall.svg" class="img-fluid">
+        </div>
+        <div class="col-6 d-flex flex-column justify-content-center align-items-center">
+          <h1 class="text-center">Work on the Mustang Morning Show!</h1>
+          <h2 class="text-center">Take a class where you get to focus on the technology you love doing and being a part
+            of this class means you are automatically a member of the TSA Club and you don't even have to attend
+            meetings.</h2>
+        </div>
 
+      </div>
 
-      <!-- <ul class="list-group text-center">
-        <li class="list-group-item">Woodworking</li>
-        <li class="list-group-item">Graphics</li>
-        <li class="list-group-item">Video Productions</li>
-        <li class="list-group-item">Architecture</li>
-        <li class="list-group-item">Digital Media</li>
-      </ul> -->
     </div>
 
-    <hr>
-
-
-
+    <hr id="Gallery">
     <div class="container">
-      <h1 class="text-center" id="Gallery">Gallery</h1>
+      <h1 class="text-center">Gallery</h1>
 
       <div class="text-center m-3">
         <button type="button" class="btn btn-outline-primary" onclick="updateGallery('tsa')">TSA</button>
@@ -132,7 +138,7 @@
 
 
 
-    <hr>
+    <hr id="Contact">
     <div class="container">
       <h1 class="text-center">Contact</h1>
       <form action="action_page.php">
