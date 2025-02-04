@@ -1,11 +1,11 @@
 const galleryData = {
     tsa: [
-      { img: "imgs/tsa1.png", title: "TSA Image 1", description: "TSA event highlights." },
-      { img: "imgs/tsa2.png", title: "TSA Image 2", description: "Students working on TSA projects." },
-      { img: "imgs/tsa3.png", title: "TSA Image 3", description: "More TSA activities." },
-      { img: "imgs/tsa4.png", title: "TSA Image 4", description: "TSA competition moments." },
-      { img: "imgs/tsa5.png", title: "TSA Image 5", description: "Collaboration at TSA." },
-      { img: "imgs/tsa6.png", title: "TSA Image 6", description: "Innovative TSA projects." }
+      { img: "imgs/tsa1.png", title: "TSA Image 1", description: "House model" },
+      { img: "imgs/tsa2.png", title: "TSA Image 2", description: "Drone design" },
+      { img: "imgs/tsa3.png", title: "TSA Image 3", description: "Motorcycle + sidecar" },
+      { img: "imgs/tsa4.png", title: "TSA Image 4", description: "Derby car" },
+      { img: "imgs/tsa5.png", title: "TSA Image 5", description: "Group's cars" },
+      { img: "imgs/tsa6.png", title: "TSA Image 6", description: "Race time!" }
     ],
     mustang: [
       { img: "imgs/placeholdersmall.svg", title: "Morning Show 1", description: "Behind the scenes of Mustang Morning Show." },
