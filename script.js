@@ -8,12 +8,9 @@ const galleryData = {
       { img: "imgs/tsa6.png", title: "TSA Image 6", description: "Race time!" }
     ],
     mustang: [
-      { img: "imgs/placeholdersmall.svg", title: "Morning Show 1", description: "Behind the scenes of Mustang Morning Show." },
-      { img: "imgs/placeholdersmall.svg", title: "Morning Show 2", description: "Filming in progress." },
-      { img: "imgs/placeholdersmall.svg", title: "Morning Show 3", description: "Production work in action." },
-      { img: "imgs/placeholdersmall.svg", title: "Morning Show 4", description: "Broadcasting live." },
-      { img: "imgs/placeholdersmall.svg", title: "Morning Show 5", description: "Editing the show." },
-      { img: "imgs/placeholdersmall.svg", title: "Morning Show 6", description: "Crew working together." }
+      { img: "imgs/mms1.png", title: "Morning Show 1", description: "Behind the scenes of Mustang Morning Show." },
+      { img: "imgs/mms2.png", title: "Morning Show 2", description: "Filming in progress." },
+      { img: "imgs/mms3.png", title: "Morning Show 3", description: "Production work in action." },
     ],
     projects: [
       { img: "imgs/placeholdersmall.svg", title: "Student Project 1", description: "A creative student project." },
@@ -27,14 +24,33 @@ const galleryData = {
   
   function updateGallery(category) {
     const galleryContainer = document.getElementById("gallery-container");
-    galleryContainer.innerHTML = ""; 
-    
-    galleryData[category].forEach((item, index) => {
+    galleryContainer.innerHTML = ""; // Clear the gallery
+  
+    const categoryData = galleryData[category];
+    const totalItems = 6; // We want 6 slots in total
+    const numberOfItems = categoryData.length;
+  
+    // Calculate number of columns based on the number of items
+    let columns = 3; // Default to 3 columns
+    if (numberOfItems <= 2) {
+      columns = 1; // 1 column for 1 or 2 items
+    } else if (numberOfItems <= 4) {
+      columns = 3; // 2 columns for 3 or 4 items
+    }
+  
+    // Apply the layout dynamically
+    galleryContainer.style.display = "grid";
+    galleryContainer.style.gridTemplateColumns = `repeat(${columns}, 1fr)`; // Define grid columns
+    galleryContainer.style.gridGap = "1rem"; // Add spacing between grid items
+    galleryContainer.style.justifyItems = "center"; // Center items horizontally
+  
+    // Add gallery items to the container
+    categoryData.forEach((item, index) => {
       const col = document.createElement("div");
-      col.className = "col-2";
+      col.className = "gallery-item";
       col.innerHTML = `
-        <img src="${item.img}" alt="${item.title}" class="img-fluid">
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal${index}">
+        <img src="${item.img}" alt="${item.title}" class="img-fluid roundedborder">
+        <button type="button" class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#modal${index}">
           View Details
         </button>
         <div class="modal fade" id="modal${index}" tabindex="-1" aria-labelledby="modalLabel${index}" aria-hidden="true">
@@ -45,6 +61,8 @@ const galleryData = {
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
+                <img src="${item.img}" class="img-fluid roundedborder">
+                <hr>
                 ${item.description}
               </div>
               <div class="modal-footer">
@@ -59,8 +77,9 @@ const galleryData = {
   }
   
   document.addEventListener("DOMContentLoaded", () => {
-    updateGallery('tsa');
+    updateGallery('mustang');
   });
+  
 
   const words = [
     { text: "Woodworking", frequency: 50 },

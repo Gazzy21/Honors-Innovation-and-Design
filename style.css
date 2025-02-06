@@ -123,3 +123,8 @@ input[type=submit]:hover {
 .nameit {
   font-size: 6vw;
 }
+
+.roundedborder {
+  border-radius: 10px;
+  border: 1px solid black;
+}
