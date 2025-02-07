@@ -121,10 +121,22 @@ input[type=submit]:hover {
 }
 
 .nameit {
-  font-size: 6vw;
+  font-size: 5vw;
 }
 
 .roundedborder {
   border-radius: 10px;
+  border: 1px solid black;
+}
+
+.roundedwerntz {
+  border-radius: 100%;
+  width: 50%;
+  height: 50%;
+  border: 1px solid black;
+}
+
+.roundedmmslogo {
+  border-radius: 50%;
   border: 1px solid black;
 }
