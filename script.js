@@ -8,9 +8,9 @@ const galleryData = {
       { img: "imgs/tsa6.png", title: "TSA Image 6", description: "Race time!" }
     ],
     mustang: [
-      { img: "imgs/mms1.png", title: "Morning Show 1", description: "Behind the scenes of Mustang Morning Show." },
-      { img: "imgs/mms2.png", title: "Morning Show 2", description: "Filming in progress." },
-      { img: "imgs/mms3.png", title: "Morning Show 3", description: "Production work in action." },
+      { img: "imgs/mms1.png", title: "Morning Show 1", description: "The youtube channel" },
+      { img: "imgs/mms2.png", title: "Morning Show 2", description: "1st ever episode" },
+      { img: "imgs/mms3.png", title: "Morning Show 3", description: "1st episode of the new season!" },
     ],
     projects: [
       { img: "imgs/placeholdersmall.svg", title: "Student Project 1", description: "A creative student project." },
