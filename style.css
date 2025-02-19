@@ -149,3 +149,56 @@ input[type=submit]:hover {
   color: white;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
+
+/* footer css */
+
+footer {
+  background: linear-gradient(#EC7A1C 10%, rgb(0, 0, 105) 90%);
+  color: #fff;
+  margin-top: 20px;
+  padding: 20px 50px;
+}
+
+.footer-text {
+  font-size: 18px;
+  font-family: "Kaisei Decol", serif;
+  font-weight: 100 !important;
+}
+
+.footer-tech-ed {
+  font-family: "Fira Sans Condensed", serif;
+  font-weight: 900;
+  margin: 0;
+  font-size: clamp(40px, 4vw, 150px);
+}
+
+
+.website,
+.place,
+.email,
+.phone {
+  font-size: clamp(20px, 2vw, 150px) !important;
+}
+
+.link {
+  color: #F4E04D !important;
+  font-family: "Fira Sans Condensed", serif;
+  transition: 0.2s;
+}
+
+.link:hover {
+  color: #b3a11e !important;
+  transition: 0.2s;
+}
+
+.footer-image {
+  width: 150px;
+  height: 150px;
+}
+
+@media (min-width: 992px) {
+  .footer-image {
+    width: 350px !important;
+    height: 350px !important;
+}
+}

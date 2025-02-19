@@ -11,14 +11,6 @@ const galleryData = {
       { img: "imgs/mms1.png", title: "Morning Show 1", description: "The youtube channel" },
       { img: "imgs/mms2.png", title: "Morning Show 2", description: "1st ever episode" },
       { img: "imgs/mms3.png", title: "Morning Show 3", description: "1st episode of the new season!" },
-    ],
-    projects: [
-      { img: "imgs/placeholdersmall.svg", title: "Student Project 1", description: "A creative student project." },
-      { img: "imgs/placeholdersmall.svg", title: "Student Project 2", description: "Innovative ideas from students." },
-      { img: "imgs/placeholdersmall.svg", title: "Student Project 3", description: "Students presenting their work." },
-      { img: "imgs/placeholdersmall.svg", title: "Student Project 4", description: "Project development stage." },
-      { img: "imgs/placeholdersmall.svg", title: "Student Project 5", description: "Final touches on projects." },
-      { img: "imgs/placeholdersmall.svg", title: "Student Project 6", description: "Showcasing student creativity." }
     ]
   };
   
@@ -100,22 +92,38 @@ words.forEach(word => {
 });
 
 function createWordCloud() {
-    const wordCloudContainer = document.getElementById('word-cloud');
-    
-    words.forEach(word => {
-        const span = document.createElement('span');
-        span.textContent = word.text;
+  const wordCloudContainer = document.getElementById('word-cloud');
+  
+  words.forEach(word => {
+      const span = document.createElement('span');
+      span.textContent = word.text;
 
-        // Set font size based on the randomized frequency
-        const fontSize = 10 + word.frequency; // Adjust scale here
-        span.style.fontSize = `${fontSize}px`;
+      // Set font size based on the randomized frequency
+      const fontSize = 10 + word.frequency; // Adjust scale here
+      span.style.fontSize = `${fontSize}px`;
 
-        // Optionally add random color
-        span.style.color = `hsl(${Math.random() * 360}, 70%, 50%)`;
+      // Randomly pick either a dark blue or an orange hue
+      let hue;
+      const colorType = Math.random();
 
-        wordCloudContainer.appendChild(span);
-    });
+      if (colorType < 0.5) {
+          // Dark blue: 180° to 240° (dark shades)
+          hue = 180 + Math.random() * 60;
+          span.style.color = `hsl(${hue}, 70%, 35%)`; // Dark blue with 35% lightness
+      } else {
+          // Orange: 30° to 45°
+          hue = 30 + Math.random() * 15;
+          span.style.color = `hsl(${hue}, 70%, 45%)`; // Orange with 45% lightness
+      }
+
+      // Apply the Fuzzy Bubbles font
+      span.style.fontFamily = '"Fuzzy Bubbles", sans-serif'; // Use Fuzzy Bubbles font
+
+      wordCloudContainer.appendChild(span);
+  });
 }
 
 // Generate the word cloud when the page loads
 window.onload = createWordCloud;
+
+
