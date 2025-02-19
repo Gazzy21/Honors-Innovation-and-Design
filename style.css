@@ -3,14 +3,23 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #EC7A1C; /* Set the background color */
+  background-color: #e5e5f7;
+  opacity: 0.9;
+  background-color: #e5e5f7;
+  opacity: 0.9;
+  background-color: #e5e5f7;
+opacity: 1;
+background-color: #e5e5f7;
+opacity: 1;
+background-image:  linear-gradient(#EC7A1C 8px, transparent 8px), linear-gradient(90deg, #EC7A1C 8px, transparent 8px), linear-gradient(#EC7A1C 4px, transparent 4px), linear-gradient(90deg, #EC7A1C 4px, #e5e5f7 4px);
+background-size: 200px 200px, 200px 200px, 40px 40px, 40px 40px;
+background-position: -8px -8px, -8px -8px, -4px -4px, -4px -4px;
 }
-
 
 /* Navbar adjustments */
 .navbar {
   padding: 10px 20px;
-  background-color: #EC7A1C; /* Set navbar background color */
+  background-color: #ec7a1c; /* Set navbar background color */
 }
 
 .navbar-nav {
@@ -69,30 +78,23 @@ body {
   }
 }
 
-/* Footer styling (basic example) */
-footer {
-  background-color: #EC7A1C; /* Match the footer background color */
-  text-align: center;
-  padding: 20px;
-  margin-top: 20px;
-  color: white; /* White text for contrast */
-}
-
 /* Style inputs with type="text", select elements and textareas */
-input[type=text], select, textarea {
+input[type="text"],
+select,
+textarea {
   width: 100%; /* Full width */
-  padding: 12px; /* Some padding */ 
+  padding: 12px; /* Some padding */
   border: 1px solid #ccc; /* Gray border */
   border-radius: 4px; /* Rounded borders */
   box-sizing: border-box; /* Make sure that padding and width stays in place */
   margin-top: 6px; /* Add a top margin */
   margin-bottom: 16px; /* Bottom margin */
-  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
 }
 
 /* Style the submit button with a specific background color etc */
-input[type=submit] {
-  background-color: #04AA6D;
+input[type="submit"] {
+  background-color: #04aa6d;
   color: white;
   padding: 12px 20px;
   border: none;
@@ -101,7 +103,7 @@ input[type=submit] {
 }
 
 /* When moving the mouse over the submit button, add a darker green color */
-input[type=submit]:hover {
+input[type="submit"]:hover {
   background-color: #45a049;
 }
 
@@ -147,13 +149,14 @@ input[type=submit]:hover {
   font-weight: 400;
   font-style: normal;
   color: white;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
 
 /* footer css */
 
 footer {
-  background: linear-gradient(#EC7A1C 10%, rgb(0, 0, 105) 90%);
+  background: linear-gradient(#ec7a1c -10%, rgb(0, 0, 105) 80%);
   color: #fff;
   margin-top: 20px;
   padding: 20px 50px;
@@ -172,7 +175,6 @@ footer {
   font-size: clamp(40px, 4vw, 150px);
 }
 
-
 .website,
 .place,
 .email,
@@ -181,7 +183,7 @@ footer {
 }
 
 .link {
-  color: #F4E04D !important;
+  color: #f4e04d !important;
   font-family: "Fira Sans Condensed", serif;
   transition: 0.2s;
 }
@@ -200,5 +202,5 @@ footer {
   .footer-image {
     width: 350px !important;
     height: 350px !important;
-}
+  }
 }
