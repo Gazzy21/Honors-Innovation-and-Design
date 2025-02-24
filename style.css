@@ -14,10 +14,37 @@ opacity: 1;
 background-image:  linear-gradient(#EC7A1C 8px, transparent 8px), linear-gradient(90deg, #EC7A1C 8px, transparent 8px), linear-gradient(#EC7A1C 4px, transparent 4px), linear-gradient(90deg, #EC7A1C 4px, #e5e5f7 4px);
 background-size: 200px 200px, 200px 200px, 40px 40px, 40px 40px;
 background-position: -8px -8px, -8px -8px, -4px -4px, -4px -4px;
+
+/* Custom scrollbar styles */
+--sb-track-color: #ffffff;
+--sb-thumb-color: #ec7a1c;
+--sb-size: 14px;
+}
+
+body::-webkit-scrollbar {
+width: var(--sb-size);
+}
+
+body::-webkit-scrollbar-track {
+background: var(--sb-track-color);
+border-radius: 4px;
+}
+
+body::-webkit-scrollbar-thumb {
+background: var(--sb-thumb-color);
+border-radius: 4px;
+border: 1px solid #ffffff;
+}
+
+/* Fallback for non-webkit browsers */
+@supports not selector(::-webkit-scrollbar) {
+body {
+  scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+}
 }
 
 .btnav {
-  border-top: ;
+  border-top: none;
 }
 
 .link-70 {
@@ -82,21 +109,32 @@ background-position: -8px -8px, -8px -8px, -4px -4px, -4px -4px;
   color: white; /* Change text color in navbar to white for contrast */
 }
 
-/* Carousel image styling */
-.carousel-item img {
-  object-fit: cover;
-  height: 70vh; /* Ensure the image occupies the full height of the viewport */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full screen height */
+  overflow: hidden;
+  border-bottom: 12px solid #ec7a1c;
 }
 
-.carousel-caption {
-  background-color: rgba(0, 0, 0, 0.5); /* Slight background for caption */
-  padding: 10px;
-  border-radius: 5px;
+.hero-section img {
+  object-fit: cover; /* Ensures the image covers the entire area */
+  width: 100%;
+  height: 100%;
+  filter: blur(2px); /* Adds the blur effect */
 }
 
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  filter: invert(1); /* White color for carousel controls */
+.hero-heading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centers the text */
+  font-size: 4rem; /* Big heading size */
+  color: white; /* Adjust text color to ensure visibility */
+  font-weight: bold;
+  text-align: center; /* Center align text */
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Optional: Adds shadow for better readability */
+  font-family: "Funnel Display", serif;
 }
 
 /* Responsive tweaks */
@@ -176,7 +214,7 @@ input[type="submit"]:hover {
 
 .nameit {
   font-size: 5vw;
-  font-family: "Funnel Display", serif;;
+  font-family: "Funnel Display", serif;
 }
 
 .funneldisplayfont {
@@ -207,6 +245,37 @@ input[type="submit"]:hover {
   color: white;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
+}
+
+/* back to top button css */
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #ffffff;
+  color: #ec7a1c;
+  border: 3px #ec7a1c solid;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 18px;
+  transition: all 0.3s;
+}
+
+#myBtn:hover {
+  transition: 0.3s;
+  box-shadow: 0 4px 8px 0 rgb(255, 255, 255), 0 6px 20px 0 rgb(255, 255, 255);
+  text-shadow: -1px 0 #ec7a1c, 0 1px #ec7a1c, 1px 0 #ec7a1c, 0 -1px #ec7a1c;
+  color: #ffffff;
+}
+
+#myBtn:active {
+  transition: 0.3s;
+  box-shadow: none;
 }
 
 /* footer css */
